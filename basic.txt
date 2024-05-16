@@ -1,0 +1,86 @@
+
+
+*** Headers_files_link  :  https://www.ibm.com/docs/en/zos/2.4.0?topic=reference-standard-c-library-header-files
+
+
+In  C++:
+    # Private & Protected.
+
+    1. Private & protected properties can not access in other class and main function.
+    2. private & protected inside can not use constructor.
+    3. here we can get and set values using getter / setter.
+
+
+    # Public:
+
+    1. Inside Public we can use constructor like (scope variables).
+    2. private value for access always define getter / setter inside the Public. 
+
+
+* this :
+    -> this keyword store current object address.
+    -> this keyword used to constructor define object parameter.
+
+* constructor:
+    -> default constructor          : class_name(){};
+    -> parameterize constructor     : class_name(data_type parameter1, data_type parameter2){};
+    -> copy constructor             : class_name obj_name(copied_obj_name); it is define inside main(){}
+                                    class_name(class_name &obj_name){
+                                        this->properties = obj_name.properties;
+                                    }
+
+* destructor : 
+    -> for used memory deallocate, for memory free or empty.
+    -> tilda_sign (~),  ~class_name(){}; for static
+    -> for dynamic manually call delete function or delete keyword.
+
+
+* static & dynamic access :
+    -- static dot (.) operator
+    -- dynamic arrow (->) operator
+    -- scope resolution operator (::) , double colon.
+
+
+*** Encapsulation: 
+
+    --> wrapping up data members and functons.
+    --> information / data hidding.
+
+    ** properties:
+        -> Public               -- inside / outside class anywhere access & can modify.
+        -> Private              -- base / parent class can access & access getter/setter access, out side class can not access.
+        -> Protected            -- kind of similer private, base & derived class can access, using getter / setter can access.
+                                    outside class can not access. 
+
+
+
+*** Inheritance : 
+
+    ->> class parent_class{};
+    ->> class child_class : access modifire parent_class{};
+
+    ** Inheritance mode :
+
+      -|-----------------|------------------------------------------------------|-
+       |                 |                 Derived_class                        |
+      -|     Base_class  |---------------|------------------|-------------------|-
+       |                 |   Public      |    private       |     protected     |
+      -|-----------------|---------------|------------------|-------------------|-
+       |     Public      |   Public      |    private       |     protected     |
+       |                 |               |                  |                   |
+       |     private     |   not access  |    not access    |     not access    |
+       |                 |               |                  |                   |
+       |     Protected   |   protected   |    private       |     Protected     |
+       |                 |               |                  |                   |
+      -|-----------------|---------------|------------------|-------------------|-
+
+
+    ** Inheritance Types : 
+        1. single Inheritance
+        2. multi-level Inheritance
+        3. multiple Inheritance
+        4. Hierarchical Inheritance
+        5. hybride Inheritance
+        6. multipath Inheritance 
+
+    

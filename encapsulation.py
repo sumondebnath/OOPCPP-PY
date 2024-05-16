@@ -1,4 +1,6 @@
 
+# copied by phitron oop class.
+
 class Bank:
     def __init__(self, name, deposit):
         self.name = name                        # public
