@@ -42,7 +42,8 @@ In  C++:
 
 
 *** Encapsulation: 
-
+    
+    --> encapsulation describes bundling data and methods.
     --> wrapping up data members and functons.
     --> information / data hidding.
 
@@ -83,4 +84,76 @@ In  C++:
         5. hybride Inheritance
         6. multipath Inheritance 
 
-    
+
+        * Hierarchical Inheritance :
+            -> Like one parent class have multiple child class or multiple drived class inherite only one base class.
+
+        * Hybride Inheritance: 
+            -> Combination of more then one type of inheritance. 
+        
+        # Inheritance Ambiguity:
+            -> A & B two class & inside A & B same_name function like abd(), and C class inherited A & B both.
+                when inside the main function C object; object.abc();
+                which  abc() will be call?
+
+            SOLUTION IS:        scope resolution operator (::)
+                inside main: 
+                                object.A::abc();
+                                object.B::abc();
+
+    ** Polymorphism:
+        poly  -> many 
+        morph -> forms 
+            --> more then one form.
+        
+        so, polymorphism is same method/function, same parameter/argument but class is different.
+            exp: class A, class B but method and parameters are same in both of class method.
+
+        types of polymorphism:
+            1. Compile time polymorphism / static Polymorphism.
+
+                1. function overloading.        -> function name same but parameter different.
+                2. operator overloading.    <syntax> return_type operator operator_sign(data_type parameters){}
+                                                    exp : void operator+ (int a, int b){
+                                                        this-> a = a;
+                                                        this->b = b;
+                                                        return b-a;
+                                                    }
+                                                    int main(){
+                                                        class_name A;
+
+                                                        A+;
+                                                    }
+
+            2. Run time polymorphism / dynamic polymorphism.
+                rules:  
+                        -> it is must be possible to inheritance
+                        -> method name will be same.
+                        -> parameter name same.
+
+                -> method overriding 
+
+
+    ** Abstraction:
+        -> Implementaion hidding.
+        --> Abstraction is the process of hiding the implementation details and showing only the functionality to the user.
+
+        use cases:
+            In C++:
+                    -> using access modifires.
+
+            In python: 
+                    -> already have buid package / module.
+                exp: 
+                    from abc import ABC, abstractclassmethod
+                    inherite(ABC):                              
+                        @abstractclassmethod                    <using decorator>
+                        def func(self):
+                        pass 
+
+
+
+*** Need to know :
+    -> interface concept
+    -> virtual function
+    -> friend function.

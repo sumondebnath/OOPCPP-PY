@@ -1,4 +1,7 @@
 .venv
+.exe
+.exe/
+/.exe
 .vscode
 .cph/
 .vscode/
